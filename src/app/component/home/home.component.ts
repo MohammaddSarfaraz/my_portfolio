@@ -1,24 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+// import { SearchCountryField, CountryISO, PhoneNumberFormat, NgxIntlTelInputComponent } from 'ngx-intl-tel-input';
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  // separateDialCode = true;
+  // SearchCountryField = SearchCountryField;
+  // CountryISO = CountryISO;
+  // PhoneNumberFormat = PhoneNumberFormat;
+  // preferredCountries: CountryISO[] = [CountryISO.India,];
+
+  // changePreferredCountries() {
+  //   this.preferredCountries = [CountryISO.India,];
+  // }
   redirectTo(getID: string) {
     const getElementById = document.getElementById(getID);
     if (!!getElementById) {
       getElementById.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
+  
 
   home = [
     {
       mohd: 'Mohd',
       srfraz: 'Sarfaraz',
       web: 'Web Designer',
-      hello:
-        'Hello! I am Web Developer from India. I have rich experience in web site design and building, I love to talk with you about our unique.',
+      hello: 'Hello! I am Web Developer from India. I have rich experience in web site design and building, I love to talk with you about our unique.',
     },
   ];
   about = [
@@ -30,7 +42,7 @@ export class HomeComponent {
       aim: 'My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.',
     },
   ];
-  style = [
+  styles = [
     {
       age: '01-02-2003',
       residence: 'INDIA',

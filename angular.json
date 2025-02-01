@@ -37,6 +37,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/intl-tel-input/build/css/intlTelInput.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -104,5 +105,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "628cd78a-dacd-4d4e-800a-f16203506f32"
   }
 }

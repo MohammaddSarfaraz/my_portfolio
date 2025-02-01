@@ -6,9 +6,8 @@
             <div class="paddingg">
                 <!-- ======home===== -->
                 <div class="home" *ngFor="let content of home" id="home">
-                    <!-- <img src="../../../assets/image/hiphop.webp" alt=""> -->
-                    <h1 style="margin: 0;padding: 0;">{{content.mohd}}</h1>
-                    <h1>{{content.srfraz}}</h1>
+                    <h5 style="margin: 0;padding: 0;">{{content.mohd}}</h5>
+                    <h5>{{content.srfraz}}</h5>
                     <h6>{{content.web}}</h6>
                     <p>{{content.hello}}</p>
                     <div class="contact-btn">
@@ -16,15 +15,16 @@
                                 aria-hidden="true"></i></button>
                     </div>
                 </div>
+
                 <!-- =======about===== -->
-                <div class="about" id="about">
+                <div class="abouts" id="about">
                     <div class="first-about" *ngFor="let content of about">
-                        <h1>{{content.header}}</h1>
+                        <h5>{{content.header}}</h5>
                         <h6>{{content.story}}</h6>
                         <p>{{content.frontend}}</p>
                         <p>{{content.aim}}</p>
                     </div>
-                    <ul class="second-about" *ngFor="let list of style">
+                    <ul class="second-about" *ngFor="let list of styles">
                         <div class="div-1">
                             <li>D birth : </li>
                             <li>Residence : </li>
@@ -41,7 +41,7 @@
                         </div>
                     </ul>
                     <div class="third-about">
-                        <h6>What I Do ?</h6>
+                        <h5>What I Do ?</h5>
                         <div class="row">
                             <div class="col-sm-6 botom" *ngFor="let columns of rows">
                                 <div class="columns">
@@ -53,10 +53,11 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- ====skills==== -->
                 <div class="skills" id="skill">
                     <div class="first-skill" *ngFor="let skill of first">
-                        <h1>{{skill.coding}}</h1>
+                        <h5>{{skill.coding}}</h5>
                         <h6>{{skill.develop}}</h6>
                         <p>{{skill.process}}</p>
                     </div>
@@ -71,22 +72,23 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- ====Contact==== -->
                 <div class="contacts" id="contact">
                     <div class="first-contact">
-                        <h1>Contact</h1>
+                        <h5>Contact</h5>
                         <h6>LET'S TALK</h6>
                     </div>
-
                     <div class="row">
                         <div class="col-sm-6">
                             <form action="your-action-url" method="post">
                                 <div class="forms">
-                                    <span>Name</span>
+                                    <span><i class="bi bi-person"></i></span>
                                     <input type="text" placeholder="Full Name" required>
                                 </div>
                                 <div class="forms">
-                                    <span>&#64;</span>
+                                    <!-- <span>&#64;</span> -->
+                                    <span><i class="bi bi-envelope-at"></i></span>
                                     <input type="email" placeholder="Email" required>
                                 </div>
                                 <div class="forms">
@@ -96,18 +98,40 @@
                                 <button type="submit">Submit <i class="bi bi-chevron-right"
                                         aria-hidden="true"></i></button>
                             </form>
+                            <!-- <form method="post">
+                                <div class="icon-input">
+                                    <i class="bi bi-person"></i>
+                                    <input type="text" placeholder="Full Name" required>
+                                </div>
+                                <div class="icon-input">
+                                    <i class="bi bi-envelope-at"></i>
+                                    <input type="email" placeholder="Email" required>
+                                </div>
+                                <div>
+                                    <ngx-intl-tel-input maxlength="10" minlength="10" required
+                                        [preferredCountries]="preferredCountries" [enableAutoCountrySelect]="true"
+                                        [enablePlaceholder]="true" [searchCountryFlag]="true"
+                                        [searchCountryField]="[ SearchCountryField.Iso2,SearchCountryField.Name ]"
+                                        [selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India"
+                                        [maxLength]="15" [phoneValidation]="true" [separateDialCode]="separateDialCode"
+                                        [numberFormat]="PhoneNumberFormat.National">
+                                    </ngx-intl-tel-input>
+                                </div>
+                                <button type="submit">Submit <i class="bi bi-chevron-right"
+                                        aria-hidden="true"></i></button>
+                            </form> -->
                         </div>
                         <div class="col-sm-6 details">
                             <div class="third-contact">
-                                <ul *ngFor="let list of style">
+                                <ul *ngFor="let list of styles">
                                     <div style="color: #70ba65;font-weight: 500;">
-                                        <li>D birth </li>
-                                        <li>Residence </li>
-                                        <li>Phone </li>
-                                        <li>Location </li>
-                                        <li>E-mail </li>
+                                        <li>D birth</li>
+                                        <li>Residence</li>
+                                        <li>Phone</li>
+                                        <li>Location</li>
+                                        <li>E-mail</li>
                                     </div>
-                                    <div style="margin-left: 10px;font-weight: 500;color: #676767;">
+                                    <div style="margin-left: 10px;">
                                         <li>{{ list.age }}</li>
                                         <li>{{ list.residence }}</li>
                                         <li>{{ list.phone }}</li>
@@ -115,20 +139,26 @@
                                         <li>{{ list.email }}</li>
                                     </div>
                                 </ul>
-                                <div class="author">sarfaraz</div>
+                                <!-- <div class="author">Sarfaraz</div> -->
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="footer">
-                    <a href="https://www.facebook.com/md.sarfraj.39501789" target="_blank" title="facebook"><i
-                            class="bi bi-facebook"></i>
+                    <a href="https://www.facebook.com/md.sarfraj.39501789" target="_blank" title="facebook">
+                        <i class="fi fi-brands-facebook"></i>
                     </a>
                     <a href="https://www.instagram.com/mdsarfaraz010/" target="_blank" title="instagram">
-                        <i class="bi bi-instagram"></i>
+                        <i class="fi fi-brands-instagram"></i>
                     </a>
-                    <a href="" target="_blank" title="linkedin"><i class="bi bi-linkedin"></i></a>
-                    <a href="" target="_blank" title="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/mohammad-sarfaraz-979633271?" target="_blank"
+                        title="linkedin"><i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/MohdSarfaraz045?t=RN0yI8bqZiBL_ByUHizTPw&s=09" target="_blank"
+                        title="twitter"><i class="fi fi-brands-twitter-alt"></i></a>
+                    <a href="" target="_blank"
+                        title="github"><i class="fi fi-brands-github"></i></a>
                 </div>
             </div>
         </div>
@@ -136,5 +166,15 @@
 </section>
 
 <div class="whatsapp">
-    <a href="https://wa.me/917970622190?text=hii_sarfaraz_jii"><i class="bi bi-whatsapp"></i></a>
+    <a href="https://wa.me/917970622190?text=hii_sarfaraz" target="_blank" title="whatsapp">
+        <i class="bi bi-whatsapp"></i></a>
 </div>
+
+<!-- <div class="input-person">
+    <i class="bi bi-person"></i>
+    <input type="text" placeholder="full name">
+</div> -->
+
+<!-- <div class="marquee">
+    <span>Ye text CSS se left se right scroll hoga.</span>
+</div> -->
